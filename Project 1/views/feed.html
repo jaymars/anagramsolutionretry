@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog Feed</title>
+</head>
+<body background="http://p1.pichost.me/i/56/1799668.jpg">
+	<h1>Current Hip Hop</h1>
+	<a href="/post/new">Create a post</a>
+	<ul>
+		{{#post}}
+		<li>{{title}}<br>{{post}}<br><br>{{photo}}</li>
+		<a href="{{path}}">Edit</a>
+		{{/post}}
+
+	</ul>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>Edit an existing post</title>
+</head>
+<body>
+	{{#post}}
+	<form method="POST" action="/post/{{id}}/edit">
+		<input type="hidden" name="_method" value="PUT">
+		Title
+		<input type="text" name="title" value={{title}}>
+		Post Content
+		<input type="text" name="post" value={{post}}>
+		Photo
+		<input type="text" name="photo" value={{photo}}>
+		<input type="submit" value="EDIT" />
+	</form>
+	<form method="POST" action="/post/{{id}}/edit">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="DELETE" />
+	</form>
+	{{/post}}
+</body>
+</html>
